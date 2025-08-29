@@ -113,6 +113,13 @@ body {
 
 }
 
+#qr-image {
+    width: 70%;
+    border: 8px solid white;
+    border-radius: 5px;
+    margin: 20px 0 25px;
+}
+
 #qr-popup h2 {
     font-family: var(--font);
     color: white;
