@@ -27,6 +27,10 @@ body {
     align-items: center;
 } 
 
+#main-container.opacity {
+    opacity: 0.4;
+}
+
 .sidebar , .home-container {
     width: 50%;
     display: flex;

@@ -4,6 +4,7 @@ const qrPopup = document.querySelector('#qr-popup');
 const qrImg = document.querySelector('#qr-image');
 const downloadBtn = document.querySelector('#download-btn');
 const closeBtn = document.querySelector('#close-btn');
+const mainContainer = document.querySelector('#main-container')
 
 const url = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=';
 
@@ -15,6 +16,7 @@ genBtn.addEventListener('click', () => {
     qrImg.setAttribute('src', imgUrl);
     setTimeout(() => {
         qrPopup.classList.add('show');
+        mainContainer.classList.add('opacity');
     },1000)
     }    
 });
@@ -33,6 +35,7 @@ downloadBtn.addEventListener('click',() => {
 
 closeBtn.addEventListener('click', () => {
     qrPopup.classList.remove('show');
+    mainContainer.classList.remove('opacity');
 }
 )
 
