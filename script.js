@@ -17,4 +17,22 @@ genBtn.addEventListener('click', () => {
         qrPopup.classList.add('show');
     },1000)
     }    
-})
+});
+
+downloadBtn.addEventListener('click',() => {
+     const imgUrl = url + inp.value;
+     fetch(imgUrl)
+     .then((res) => res.blob())
+     .then((blob) => {
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'qr.jpg';
+        link.click();
+     })
+});
+
+closeBtn.addEventListener('click', () => {
+    qrPopup.classList.remove('show');
+}
+)
+
