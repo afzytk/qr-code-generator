@@ -72,7 +72,7 @@ body {
     font-family: var(--font);
 }
 
-#generate-btn {
+#generate-btn, #download-btn, #close-btn {
     height: 35px;
     width: 85%;
     background-color: black;
@@ -85,6 +85,48 @@ body {
     transition: transform 0.4s;
 }
 
-#generate-btn:hover {
+#generate-btn:hover, #download-btn, #close-btn {
     transform: scale(1.05);
+}
+
+#qr-popup {
+    height: 450px;
+    width: 300px;
+    background-color: black;
+    position: absolute;
+    bottom: 60%;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #212121;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 0.5s ease-in-out, opacity 0.5s, bottom 0.5s ease-in-out;
+}
+
+#qr-popup.show {
+    transform: scale(1);
+    opacity: 1;
+    bottom: 15%;
+
+}
+
+#qr-popup h2 {
+    font-family: var(--font);
+    color: white;
+}
+
+#download-btn {
+    width: 70%;
+    background-color: #fff;
+    color: black;
+    margin: 3px 0;
+}
+
+#close-btn {
+    width: 70%;
+    border: 1px solid white;
+    margin: 3px 0;
 }
