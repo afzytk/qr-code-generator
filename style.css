@@ -52,9 +52,10 @@ body {
     height: 200px;
     width: 50%;
     background-color: #fff;
-    box-shadow: 0 5px 10px black;
+    box-shadow: 0 5px 10px grey;
     border-radius: 5px;
     padding: 10px;
+    margin-left: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
